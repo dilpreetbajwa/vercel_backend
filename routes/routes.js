@@ -6,4 +6,4 @@ router.post("/auth/register", register)
 router.post("/auth/login", login)
 router.post("/auth/logout", logout)
 
-export default router;
+export { router as Router };
