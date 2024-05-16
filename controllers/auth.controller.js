@@ -18,6 +18,12 @@ export const register = async (req, res, next) => {
     next(err);
   }
 };
+
+export const getuser = async (req, res, next) => {
+    const user = await User.find();
+  
+    res.status(200).send(user);
+  };
 // export const login = async (req, res, next) => {
 //   try {
 //     const user = await User.findOne({ username: req.body.username });
