@@ -21,8 +21,7 @@ export const register = async (req, res, next) => {
 
 export const getuser = async (req, res, next) => {
     const user = await User.find();
-  
-    res.status(200).send(user);
+      res.json(user);
   };
 // export const login = async (req, res, next) => {
 //   try {
