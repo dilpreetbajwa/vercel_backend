@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import { Router } from './routes/routes.js'
 
 const app = express();
 dotenv.config();
@@ -15,7 +16,11 @@ const connect = async () => {
     }
   };
 
-  app.get('/')
+    app.use("/api", Router);
+
+    app.get("/", (req, res) => {
+        res.json("Hello");
+    })
 // Define routes and middleware here
 // ...
 
