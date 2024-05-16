@@ -9,7 +9,7 @@ mongoose.set("strictQuery", true);
 
 const connect = async () => {
     try {
-      await mongoose.connect(process.env.MONGOBD_URI);
+      await mongoose.connect(process.env.MONGODB_URI);
       console.log("Connected to mongoDB!");
     } catch (error) {
       console.log(error);
@@ -33,7 +33,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen  (PORT, () => {
     connect();
     console.log(`Server running on port ${PORT}`);
 });
