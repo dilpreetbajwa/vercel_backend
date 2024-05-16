@@ -20,8 +20,8 @@ export const register = async (req, res, next) => {
 };
 
 export const getuser = async (req, res, next) => {
-    const user = await User.find();
-      res.json(user);
+   
+      res.json("Hello");
   };
 // export const login = async (req, res, next) => {
 //   try {
